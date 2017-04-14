@@ -2,6 +2,8 @@
 
 source colors.sh
 
+brew install bash-completion
+
 if [ -f "$HOME/.gitconfig" ]; then
     msg_update ".gitconfig"
     rm ~/.gitconfig

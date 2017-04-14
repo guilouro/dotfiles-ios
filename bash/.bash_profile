@@ -22,6 +22,7 @@ alias home='cd ~'
 
 
 #-- System
+alias ll='ls -la'
 alias ld='ll | grep "^d"' ## List only directories
 alias lh='ls -lah' ## size files
 alias cl='clear'
@@ -57,6 +58,10 @@ if [ -e "/usr/local/bin/virtualenvwrapper.sh" ]; then
 	export PROJECT_HOME=~/PythonProjects
 	export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 	source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
 fi
 
 source ~/.bash_prompt
