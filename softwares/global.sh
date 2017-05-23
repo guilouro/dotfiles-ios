@@ -6,6 +6,9 @@ brew tap homebrew/science # science
 brew tap caskroom/fonts # fonts
 brew tap caskroom/versions
 
+# Dev libs
+brew install python3
+
 # Browser
 brew cask install google-chrome 2> /dev/null
 
