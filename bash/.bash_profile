@@ -55,7 +55,7 @@ alias cl-gulp='git clone https://github.com/guilouro/gulp-boilerplate.git .'
 # VirtualenvWrapper
 if [ -e "/usr/local/bin/virtualenvwrapper.sh" ]; then
 	export WORKON_HOME=~/.virtualenvs
-	export PROJECT_HOME=~/PythonProjects
+	export PROJECT_HOME=~/Dev/Projects/Python
 	export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 	source /usr/local/bin/virtualenvwrapper.sh
 fi
@@ -67,3 +67,6 @@ fi
 source ~/.bash_prompt
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export NVM_DIR="/Users/guilouro/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
