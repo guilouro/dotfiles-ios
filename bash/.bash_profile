@@ -47,6 +47,7 @@ alias git-gen-serv='git clone https://github.com/guilouro/git-gen-serv.git . && 
 
 #-- Geral
 alias server='python -m SimpleHTTPServer'
+alias docker-rm-none-image='docker rmi -f $(docker images | grep "^<none>" | awk "{print $3}")'
 
 #-- Clones
 alias cl-grunt='git clone https://github.com/guilouro/grunt-workflow.git .'
