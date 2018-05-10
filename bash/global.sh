@@ -33,3 +33,5 @@ if [ -f "$HOME/.bashrc" ]; then
         msg_alert "For use on this session, type: source ~/.bashrc"
     fi
 fi
+
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash

@@ -8,7 +8,7 @@ if [[ -d $DOTFILES ]]; then
     msg_checking 'Checking dotfiles directory'
 else
     msg_install 'Cloning dotfiles'
-    git clone https://github.com/guilouro/dotfiles.git $DOTFILES
+    git clone https://github.com/guilouro/dotfiles-ios.git $DOTFILES
 fi
 
 cd $DOTFILES
@@ -17,4 +17,4 @@ source bash/global.sh
 
 source git/global.sh
 
-source sublime/global.sh
+source softwares/global.sh

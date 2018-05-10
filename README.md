@@ -1,7 +1,7 @@
 ### Install
 
 ```bash
-curl -L https://raw.github.com/guilouro/dotfiles/master/install | bash
+curl -L https://raw.github.com/guilouro/dotfiles-ios/master/install | bash
 ```
 
 ### Git configure
