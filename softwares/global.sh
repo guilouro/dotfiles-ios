@@ -1,3 +1,6 @@
+# brew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 # cask
 brew install caskroom/cask/brew-cask
 
