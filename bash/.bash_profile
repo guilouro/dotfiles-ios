@@ -56,7 +56,7 @@ alias cl-gulp='git clone https://github.com/guilouro/gulp-boilerplate.git .'
 # VirtualenvWrapper
 if [ -e "/usr/local/bin/virtualenvwrapper.sh" ]; then
 	export WORKON_HOME=~/.virtualenvs
-	export PROJECT_HOME=~/Dev/Projects/Python
+	export PROJECT_HOME=~/dev/projects
 	export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 	source /usr/local/bin/virtualenvwrapper.sh
 fi
@@ -66,10 +66,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 # Autocomplete for git
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
-fi
-
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 source ~/.bash_prompt
 
