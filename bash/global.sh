@@ -21,17 +21,6 @@ fi
 sudo ln -s $DOTFILES/bash/.bash_prompt ~/.bash_prompt
 msg_checking ".bash_prompt"
 
+source ~/.bash_profile
 
-if [ -f "$HOME/.bashrc" ]; then
-
-    msg_update ".bashrc"
-
-    if ! grep -inr ".bash_profile" ~/.bashrc > /dev/null; then
-        echo 'source ~/.bash_profile' >> ~/.bashrc
-        source ~/.bashrc
-        msg_checking ".bashrc"
-        msg_alert "For use on this session, type: source ~/.bashrc"
-    fi
-fi
-
-curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+# curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
