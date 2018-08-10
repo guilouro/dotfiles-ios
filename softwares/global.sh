@@ -11,6 +11,7 @@ brew tap caskroom/versions
 
 # Dev libs
 brew install python3
+brew install heroku/brew/heroku
 
 # Browser
 brew cask install google-chrome 2> /dev/null
