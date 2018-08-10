@@ -66,7 +66,9 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 # Autocomplete for git
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
 
 source ~/.bash_prompt
 
