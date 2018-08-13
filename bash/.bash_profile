@@ -19,6 +19,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias -- -="cd -"
 alias home='cd ~'
+alias dev='cd ~/dev/projects'
 
 
 #-- System
