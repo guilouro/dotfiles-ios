@@ -77,3 +77,4 @@ source ~/.bash_prompt
 
 export NVM_DIR="/Users/guilouro/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+eval "$(/opt/homebrew/bin/brew shellenv)"

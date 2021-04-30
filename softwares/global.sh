@@ -2,12 +2,11 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # cask
-brew install caskroom/cask/brew-cask
+brew install homebrew/cask
 
 # add formulae to homebrew
-brew tap homebrew/science # science
-brew tap caskroom/fonts # fonts
-brew tap caskroom/versions
+brew tap homebrew/cask-fonts # fonts
+brew tap homebrew/cask-versions
 
 # Dev libs
 brew install python3
@@ -36,3 +35,4 @@ brew cask install spotify 2> /dev/null
 brew cask install slack 2> /dev/null
 # brew cask install coconutbattery 2> /dev/null
 # brew cask install stremio 2> /dev/null
+
