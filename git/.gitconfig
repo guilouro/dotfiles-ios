@@ -131,3 +131,5 @@
 	autosetuprebase = always
 [merge]
 	ff = true
+[init]
+	defaultBranch = master

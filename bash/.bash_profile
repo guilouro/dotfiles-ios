@@ -54,11 +54,16 @@ alias docker-rm-none-image='docker rmi -f $(docker images | grep "^<none>" | awk
 alias cl-grunt='git clone https://github.com/guilouro/grunt-workflow.git .'
 alias cl-gulp='git clone https://github.com/guilouro/gulp-boilerplate.git .'
 
+#-- Personal
+alias ssh-netfla-aws='ssh -i "~/Documents/netfla/netfla.pem" ubuntu@ec2-3-16-29-134.us-east-2.compute.amazonaws.com'
+
 # VirtualenvWrapper
 if [ -e "/usr/local/bin/virtualenvwrapper.sh" ]; then
 	export WORKON_HOME=~/.virtualenvs
-	export PROJECT_HOME=~/dev/projects
-	export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+	export PROJECT_HOME=~/dev/projects/python
+	export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=''
+	export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+	export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 	source /usr/local/bin/virtualenvwrapper.sh
 fi
 
@@ -67,14 +72,19 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 # Autocomplete for git
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
+# curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/git-auto-complete.bash
+if [ -f ~/git-auto-complete.bash ]; then
+  . ~/git-auto-complete.bash
 fi
 
 source ~/.bash_prompt
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-export NVM_DIR="/Users/guilouro/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-eval "$(/opt/homebrew/bin/brew shellenv)"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH=~/Library/Python/3.9/bin:$PATH
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
